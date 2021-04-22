@@ -1,3 +1,10 @@
 * {
   box-sizing: border-box;
 }
+
+.row button {
+  width: 70px;
+  padding: 20px;
+  font-size: large;
+  font-weight: 600;
+}
