@@ -3,17 +3,22 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 
 class App extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      /* name: 'hay' */
+    };
+  }
+
   render() {
     return (
       <div>
         <Display result="15" />
+
         <ButtonPanel />
       </div>
     );
   }
 }
-
-
 
 export default App;
