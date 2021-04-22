@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = (props) => {
-  return <h1>{props.result}</h1>;
+  const { result } = props;
+  return <h1>{result}</h1>;
 };
 
 // Props types and defaults

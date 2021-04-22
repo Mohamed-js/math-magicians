@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 const ButtonPanel = () => {
-  const renderButton = (name) => {
-    return <Button name={name} />;
-  };
+  const renderButton = (name) => <Button name={name} />;
 
   return (
     <>

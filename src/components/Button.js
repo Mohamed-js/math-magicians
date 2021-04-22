@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 const Button = (props) => {
   const { name } = props;
-  return <button type="button"> {name} </button>;
+  return (
+    <button type="button">
+      {' '}
+      {name}
+      {' '}
+    </button>
+  );
 };
 
 // Props types and defaults
