@@ -12,7 +12,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <Display result="15" />
 
         <ButtonPanel />

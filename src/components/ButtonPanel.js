@@ -6,7 +6,7 @@ const ButtonPanel = () => {
   const renderButton = (name) => <Button name={name} />;
 
   return (
-    <>
+    <div className="panel">
       <div className="row">
         {renderButton('AC')}
         {renderButton('+/-')}
@@ -17,7 +17,7 @@ const ButtonPanel = () => {
         {renderButton('7')}
         {renderButton('8')}
         {renderButton('9')}
-        {renderButton('X')}
+        {renderButton('x')}
       </div>
       <div className="row">
         {renderButton('4')}
@@ -36,7 +36,7 @@ const ButtonPanel = () => {
         {renderButton('.')}
         {renderButton('=')}
       </div>
-    </>
+    </div>
   );
 };
 
