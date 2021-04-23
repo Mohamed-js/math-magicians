@@ -14,7 +14,6 @@ class App extends Component {
     return (
       <div className="container">
         <Display result="15" />
-
         <ButtonPanel />
       </div>
     );
