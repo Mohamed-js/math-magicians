@@ -1,23 +1,41 @@
 import React, { Component } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import operate from '../logic/operate';
 import calculate from '../logic/calculator';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: 20,
+      data: {
+        total: '',
+        next: '',
+        operation: '',
+      },
     };
-    this.calc = calculate.bind(this);
+    this.btnClick = this.btnClick.bind(this);
   }
 
+  btnClick = (btnName) => {
+    const oldData = this.state.data;
+    const newResult = calculate(oldData, btnName);
+    newResult
+      ? this.setState({ data: newResult })
+      : this.setState({
+          data: {
+            total: '',
+            next: '',
+            operation: '',
+          },
+        });
+  };
+
   render() {
+    const data = this.state.data;
     return (
       <div className="container">
-        <Display result={this.state.result.toString()} />
-        <ButtonPanel calc={this.calc} />
+        <Display result={data} />
+        <ButtonPanel btnClick={this.btnClick} />
       </div>
     );
   }

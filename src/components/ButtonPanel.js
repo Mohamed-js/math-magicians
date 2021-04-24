@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 const ButtonPanel = (props) => {
+  const { btnClick } = props;
   const renderButton = (name) => (
-    <Button name={name} onClick={() => props.calc} />
+    <Button name={name} btnClick={() => btnClick(name)} />
   );
 
   return (
@@ -13,7 +14,7 @@ const ButtonPanel = (props) => {
         {renderButton('AC')}
         {renderButton('+/-')}
         {renderButton('%')}
-        {renderButton('/')}
+        {renderButton('÷')}
       </div>
       <div className="row">
         {renderButton('7')}

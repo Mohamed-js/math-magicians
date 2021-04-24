@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = (props) => {
-  const { name, onClick } = props;
+  const { name, btnClick } = props;
   return (
-    <button type="button" onClick={onClick({ s: 'hay' }, name)}>
-      {' '}
-      {name}{' '}
+    <button onClick={() => btnClick(name)} type="button">
+      {name}
     </button>
   );
 };

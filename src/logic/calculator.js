@@ -4,9 +4,10 @@ const calculate = (data, btnName) => {
   let { total, next, operation } = data;
 
   if (btnName === 'AC') {
-    total = null;
-    next = null;
-    operation = null;
+    data.total = '';
+    data.next = '';
+    data.operation = '';
+    return data;
   }
 
   if (btnName === '%') {
@@ -44,11 +45,41 @@ const calculate = (data, btnName) => {
     if (total && !next) {
       data.operation = btnName;
     }
-    if (total && naxt && operation) {
+    if (total && next && operation) {
       data.total = operate(total, next, operation);
       data.next = '';
       data.operation = btnName;
     }
+    return data;
+  }
+
+  if (btnName === '.') {
+    if (!total) {
+      data.total = '0.';
+    }
+    if (total && !operation) {
+      data.total += '.';
+    }
+    if (total && operation && next) {
+      data.next += '.';
+    }
+    if (total && operation && !next) {
+      data.next += '0.';
+    }
+
+    return data;
+  }
+
+  if (btnName === '=') {
+    if (total && !next) {
+      data.total = total;
+    }
+    if (total && next && operation) {
+      data.total = operate(total, next, operation);
+      data.next = '';
+      data.operation = '';
+    }
+
     return data;
   }
   return data;

@@ -22,8 +22,7 @@ const operate = (n1, n2, sign) => {
     ans = one.div(Big('100'));
   }
 
-  ans = ans !== NaN ? ans.toPrecision() : 'NaN';
-
+  ans = ans.toPrecision();
   return ans;
 };
 
