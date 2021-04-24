@@ -17,9 +17,8 @@ class App extends Component {
   }
 
   btnClick = (btnName) => {
-    /* eslint-disable-next-line */
-    const oldData = this.state.data;
-    const newResult = calculate(oldData, btnName);
+    const { data } = this.state;
+    const newResult = calculate(data, btnName);
     /* eslint-disable-next-line */
     newResult
       ? this.setState({ data: newResult })

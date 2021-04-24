@@ -3,17 +3,19 @@ import PropTypes from 'prop-types';
 
 const Display = (props) => {
   /* eslint-disable-next-line */
-  const data = props.result;
+  const {
+    result: { total, operation, next },
+  } = props;
   return (
     <>
       <p className="logo">Casio Atef :)</p>
       <div className="display">
         <p>
-          <span>{data.total}</span>
-          <span>{data.operation}</span>
-          <span>{data.next}</span>
+          <span>{total}</span>
+          <span>{operation}</span>
+          <span>{next}</span>
         </p>
-        <h1>{data.total}</h1>
+        <h1>{total}</h1>
       </div>
     </>
   );
