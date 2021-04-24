@@ -8,7 +8,7 @@ const Display = (props) => {
   } = props;
   return (
     <>
-      <p className="logo">Casio Atef :)</p>
+      <p className="logo p">Casio Atef :)</p>
       <div className="display">
         <p>
           <span>{total}</span>
