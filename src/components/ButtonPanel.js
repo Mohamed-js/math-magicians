@@ -46,9 +46,11 @@ const ButtonPanel = (props) => {
 // Props types and defaults
 ButtonPanel.propTypes = {
   result: PropTypes.string,
+  btnClick: PropTypes.func,
 };
 ButtonPanel.defaultProps = {
   result: '0',
+  btnClick: PropTypes.func,
 };
 
 export default ButtonPanel;

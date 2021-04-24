@@ -17,21 +17,23 @@ class App extends Component {
   }
 
   btnClick = (btnName) => {
+    /* eslint-disable-next-line */
     const oldData = this.state.data;
     const newResult = calculate(oldData, btnName);
+    /* eslint-disable-next-line */
     newResult
       ? this.setState({ data: newResult })
       : this.setState({
-          data: {
-            total: '',
-            next: '',
-            operation: '',
-          },
-        });
+        data: {
+          total: '',
+          next: '',
+          operation: '',
+        },
+      });
   };
 
   render() {
-    const data = this.state.data;
+    const { data } = this.state;
     return (
       <div className="container">
         <Display result={data} />

@@ -13,9 +13,11 @@ const Button = (props) => {
 // Props types and defaults
 Button.propTypes = {
   name: PropTypes.string,
+  btnClick: PropTypes.func,
 };
 Button.defaultProps = {
   name: '0',
+  btnClick: PropTypes.func,
 };
 
 export default Button;

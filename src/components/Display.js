@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = (props) => {
+  /* eslint-disable-next-line */
   const data = props.result;
   return (
     <>
