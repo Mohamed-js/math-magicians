@@ -1,7 +1,8 @@
 import operate from './operate';
 
-const calculate = (data, btnName) => {
-  let { total, next, operation } = data;
+const calculate = (pdata, btnName) => {
+  const data = pdata;
+  const { total, next, operation } = data;
 
   if (btnName === 'AC') {
     data.total = '';
