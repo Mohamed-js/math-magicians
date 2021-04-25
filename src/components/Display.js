@@ -2,8 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = (props) => {
-  const { result } = props;
-  return <h1 className="display">{result}</h1>;
+  /* eslint-disable-next-line */
+  const {
+    result: { total, operation, next },
+  } = props;
+  return (
+    <>
+      <p className="logo p">Casio Atef :)</p>
+      <div className="display">
+        <p>
+          <span>{total}</span>
+          <span>{operation}</span>
+          <span>{next}</span>
+        </p>
+        <h1>{total}</h1>
+      </div>
+    </>
+  );
 };
 
 // Props types and defaults

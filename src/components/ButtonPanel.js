@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = () => {
-  const renderButton = (name) => <Button name={name} />;
+const ButtonPanel = (props) => {
+  const { btnClick } = props;
+  const renderButton = (name) => (
+    <Button name={name} btnClick={() => btnClick(name)} />
+  );
 
   return (
     <div className="panel">
@@ -11,7 +14,7 @@ const ButtonPanel = () => {
         {renderButton('AC')}
         {renderButton('+/-')}
         {renderButton('%')}
-        {renderButton('/')}
+        {renderButton('÷')}
       </div>
       <div className="row">
         {renderButton('7')}
@@ -43,9 +46,11 @@ const ButtonPanel = () => {
 // Props types and defaults
 ButtonPanel.propTypes = {
   result: PropTypes.string,
+  btnClick: PropTypes.func,
 };
 ButtonPanel.defaultProps = {
   result: '0',
+  btnClick: PropTypes.func,
 };
 
 export default ButtonPanel;

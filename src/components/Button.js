@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = (props) => {
-  const { name } = props;
+  const { name, btnClick } = props;
   return (
-    <button type="button">
-      {' '}
+    <button onClick={() => btnClick(name)} type="button">
       {name}
-      {' '}
     </button>
   );
 };
@@ -15,9 +13,11 @@ const Button = (props) => {
 // Props types and defaults
 Button.propTypes = {
   name: PropTypes.string,
+  btnClick: PropTypes.func,
 };
 Button.defaultProps = {
   name: '0',
+  btnClick: PropTypes.func,
 };
 
 export default Button;
