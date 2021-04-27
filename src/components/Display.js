@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 const Display = (props) => {
   const { result } = props;
-  // const { total, operation, next } = result;
-
+  // console.log('');
   return (
     <>
       <p className="logo p">Casio Atef :)</p>
@@ -29,11 +28,7 @@ Display.propTypes = {
   }),
 };
 Display.defaultProps = {
-  result: {
-    total: '',
-    next: '',
-    operation: '',
-  },
+  result: {},
 };
 
 export default Display;
