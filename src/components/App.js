@@ -12,7 +12,8 @@ const App = () => {
 
   const btnClick = (btnName) => {
     const newResult = calculate(data, btnName);
-    setData(newResult);
+    const { total, next, operation } = newResult;
+    setData({ total, next, operation });
   };
 
   return (

@@ -1,5 +1,12 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -69,4 +76,54 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+/* NAVBAR STYLES */
+
+nav {
+  padding: 10px;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 300px);
+  align-self: center;
+  width: 100%;
+}
+
+.max-width {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-logo {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.tabs a {
+  margin: 8px;
+  text-decoration: none;
+}
+
+/* HOME */
+h1 {
+  font-size: 90px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 50px;
+  margin-top: 30px;
+  text-align: center;
 }
