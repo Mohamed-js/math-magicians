@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About link renders correctly 1`] = `"<Link to=\\"/about\\">About</Link>"`;
+
+exports[`Calculator link renders correctly 1`] = `"<Link to=\\"/calculator\\">Calculator</Link>"`;
+
+exports[`Calculator link renders correctly 2`] = `"<Home />"`;
+
+exports[`Home link renders correctly 1`] = `"<Link to=\\"/\\">Home</Link>"`;
