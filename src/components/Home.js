@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => (
   <>
     <h1>Math Magicians</h1>
-    <h3>All magic happens here!</h3>
+    <h3>Where all the magic happens!</h3>
   </>
 );
 
