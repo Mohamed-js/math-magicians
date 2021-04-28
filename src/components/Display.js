@@ -2,20 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = (props) => {
-  /* eslint-disable-next-line */
-  const {
-    result: { total, operation, next },
-  } = props;
+  const { result } = props;
   return (
     <>
       <p className="logo p">Casio Atef :)</p>
       <div className="display">
         <p>
-          <span>{total}</span>
-          <span>{operation}</span>
-          <span>{next}</span>
+          <span>{result.total}</span>
+          <span>{result.operation}</span>
+          <span>{result.next}</span>
         </p>
-        <h1>{total}</h1>
+        <h2>{result.total}</h2>
       </div>
     </>
   );
@@ -23,10 +20,14 @@ const Display = (props) => {
 
 // Props types and defaults
 Display.propTypes = {
-  result: PropTypes.string,
+  result: PropTypes.shape({
+    total: PropTypes.string,
+    next: PropTypes.string,
+    operation: PropTypes.string,
+  }),
 };
 Display.defaultProps = {
-  result: '0',
+  result: {},
 };
 
 export default Display;

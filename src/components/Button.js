@@ -10,7 +10,6 @@ const Button = (props) => {
   );
 };
 
-// Props types and defaults
 Button.propTypes = {
   name: PropTypes.string,
   btnClick: PropTypes.func,
