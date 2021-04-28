@@ -24,6 +24,12 @@ In this project:
 - run "npm install"
 - run "npm start"
 
+## Testing
+
+- Clone the repo "https://github.com/Mohamed-js/math-magicians.git"
+- run "npm install"
+- run "npm test"
+
 ## Technologies
 
 - React
