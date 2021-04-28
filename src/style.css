@@ -31,10 +31,12 @@
   border-radius: 8px;
   margin: auto;
 }
+
 .row {
   display: flex;
   overflow: hidden;
 }
+
 .row button {
   flex-basis: 25%;
   padding: 20px;
@@ -53,7 +55,7 @@
 }
 
 .panel {
-  background: #444444;
+  background: #444;
   width: 100%;
   border: 2px solid rgb(83, 83, 83);
   border-radius: 8px;
@@ -75,6 +77,11 @@
 }
 
 /* NAVBAR STYLES */
+
+.max-width {
+  max-width: 1000px;
+  margin: auto;
+}
 
 nav {
   padding: 10px;
@@ -101,11 +108,6 @@ a {
   height: calc(100% - 300px);
   align-self: center;
   width: 100%;
-}
-
-.max-width {
-  max-width: 1000px;
-  margin: auto;
 }
 
 .flex-row {
