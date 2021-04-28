@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const Display = (props) => {
   const { result } = props;
-  // console.log('');
   return (
     <>
       <p className="logo p">Casio Atef :)</p>
@@ -13,7 +12,7 @@ const Display = (props) => {
           <span>{result.operation}</span>
           <span>{result.next}</span>
         </p>
-        <h1>{result.total}</h1>
+        <h2>{result.total}</h2>
       </div>
     </>
   );
