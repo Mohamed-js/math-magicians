@@ -1,6 +1,6 @@
 # MATH MAGICIANS - Calculator app
 
-This project is a simple calculator made mainly with react.
+This project is a simple calculator app made mainly with react.
 
 <div align="center">
 
